@@ -11,7 +11,7 @@ func CreateUser(ginctx *gin.Context) {
 	var userRequest request.UserRequest
 
 	if err := ginctx.ShouldBindJSON(&userRequest); err != nil {
-		restErr := rest_err.NewBadRequestError(fmt.Sprintf("there are some incorrect filds: %s\n", err.Error()))
+		restErr := rest_err.NewBadRequestError(fmt.Sprintf("there are some incorrect filds: %s", err.Error()))
 		ginctx.JSON(restErr.Code, restErr)
 		return
 	}
