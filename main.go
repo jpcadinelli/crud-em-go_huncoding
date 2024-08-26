@@ -1,8 +1,11 @@
 package main
 
 import (
-	"github.com/joho/godotenv"
+	"crud-em-go_huncoding/src/controller/routes"
 	"log"
+
+	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {

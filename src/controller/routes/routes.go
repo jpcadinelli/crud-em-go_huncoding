@@ -1,6 +1,10 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"crud-em-go_huncoding/src/controller/user"
+
+	"github.com/gin-gonic/gin"
+)
 
 func InitRoutes(r *gin.RouterGroup) {
 	r.GET("/getUserById/:userId", user.FindUserById)
